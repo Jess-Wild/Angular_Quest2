@@ -1,0 +1,11 @@
+<div class="container d-flex column">
+  <img [src]="user.photo" [alt]="user.name" />
+  <p class="bold">Nom : {{ user.name }}</p>
+  <p class="bold">Prénom : {{ user.firstName }}</p>
+  <p *ngIf="display == true">Age : {{ user.age }}</p>
+  <p>{{ user.quote }}</p>
+  <input type="text" [(ngModel)]="user.quote" />
+  <button type="button" (click)="display = !display">
+    Afficher/Masquer mon âge
+  </button>
+</div>
